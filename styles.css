@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.message {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-text {
+    font-size: 2em;
+    color: #ff6699;
+    transition: all 0.5s ease;
+}
+
+.animated-text:hover {
+    color: #ff3399;
+    transform: scale(1.1);
+}
+
+.description {
+    color: #666;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background-image: url('heart.png');
+    background-size: cover;
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 25px);
+    animation: heartbeat 1s ease infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
